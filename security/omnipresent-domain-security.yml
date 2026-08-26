@@ -1,0 +1,60 @@
+generated: '2026-08-26'
+method: probed
+source: live DNS/TLS/HTTP probes of omnipresent.com and omnipresent.group, 2026-08-26
+note: >-
+  This file was first written by probe-domain-security.py against www.hiive.com — the
+  secondary-market VENUE listed in apis.yml, not a host Omnipresent controls — and was
+  rewritten by hand so the posture recorded here belongs to the company. Omnipresent was
+  acquired by Deel in October 2025 and its web presence has been decommissioned: neither
+  omnipresent.com nor omnipresent.group serves anything over HTTP, so there is no TLS or
+  HSTS posture left to measure. The Google Workspace MX records on omnipresent.com are
+  still published, which is why the zone still exists at all.
+hosts:
+- host: https://omnipresent.com
+  reachable: false
+  https: false
+  dns_a_records: 0
+  note: >-
+    Apex has NS delegation to Route 53 but publishes no A or AAAA record; every HTTPS
+    request fails at name resolution (curl exit 6), so no certificate, TLS version or
+    HSTS header can be observed.
+- host: https://www.omnipresent.com
+  reachable: false
+  https: false
+  dns_a_records: 0
+  note: NXDOMAIN — the www label was removed from the zone.
+- host: https://omnipresent.group
+  reachable: false
+  https: false
+  dns_a_records: 0
+  note: >-
+    The company's original domain. Delegation is broken at the registry — every public
+    resolver returns SERVFAIL — so the zone no longer answers at all.
+domains:
+- domain: omnipresent.com
+  zone_present: true
+  nameservers:
+  - ns-45.awsdns-05.com
+  - ns-559.awsdns-05.net
+  - ns-1069.awsdns-05.org
+  - ns-1626.awsdns-11.co.uk
+  dnssec: false
+  ds_records: 0
+  caa: []
+  mx: true
+  mx_provider: Google Workspace (aspmx.l.google.com)
+  spf: false
+  dmarc: false
+  dmarc_policy: null
+  note: >-
+    Mail is still delegated to Google Workspace while the web is gone. No SPF TXT record
+    and no _dmarc TXT record are published, so a live mail domain is running with no
+    published sender authentication or reporting policy — the notable finding here.
+- domain: omnipresent.group
+  zone_present: false
+  dnssec: null
+  caa: null
+  mx: null
+  spf: null
+  dmarc: null
+  note: SERVFAIL on every query; delegation is broken or the registration has lapsed.

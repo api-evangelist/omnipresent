@@ -1,0 +1,70 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  https://www.goodwinlaw.com/en/news-and-events/news/2025/10/announcements-technology-goodwin-advises-omnipresent-in-acquisition-by-deel
+note: >-
+  This is a retirement record, not an API versioning policy. Omnipresent never published a
+  public developer portal, versioning policy, deprecation policy, SLA or status page that
+  could be captured, and the company no longer operates a web presence from which one
+  could be read. What is recorded here is the end-of-life of the company surface itself,
+  because that is the fact a reader of this profile needs.
+company_status: acquired
+operating: false
+acquisition:
+  acquirer: Deel
+  acquirer_profile: all/deel
+  announced: '2025-10-22'
+  announced_source: >-
+    https://www.goodwinlaw.com/en/news-and-events/news/2025/10/announcements-technology-goodwin-advises-omnipresent-in-acquisition-by-deel
+  announced_source_status: 200
+  terms: not disclosed in the primary announcement
+  note: >-
+    Secondary coverage reports an October 2025 close and circulates a purchase price, but
+    the price is not stated in the advising firm's announcement and is not recorded here.
+service_migration:
+  destination: Deel platform
+  scope: client companies, employees and contractors
+  completed: '2025-10'
+  publisher: Deel (help.letsdeel.com)
+  publisher_note: >-
+    Deel published migration guides for Omnipresent businesses, workers and customer
+    employees on its own help center. Those guides are Deel's documents, not Omnipresent's,
+    so no Deprecation pointer is emitted on this profile — the sunset notice was issued by
+    the acquirer.
+  evidence:
+  - url: https://help.letsdeel.com/hc/en-gb/articles/39708270639377-Omnipresent-to-Deel-Migration-Guide-for-Businesses
+    status: 403
+    note: >-
+      Zendesk help center refuses automated fetches (403 to both curl with a browser
+      user-agent and to WebFetch); the article is indexed and publicly titled, so it is
+      recorded as existing but was not read first-hand.
+domain_decommission:
+  omnipresent.com:
+    web: gone
+    checked: '2026-08-26'
+    detail: >-
+      NS delegated to Route 53 and Google Workspace MX still published, but no A or AAAA
+      record on the apex and NXDOMAIN on www — the site is switched off while mail routing
+      survives.
+  omnipresent.group:
+    web: gone
+    checked: '2026-08-26'
+    detail: SERVFAIL at the registry; delegation broken or registration lapsed.
+  github.com/OmnipresentGroup:
+    status: live
+    checked: '2026-08-26'
+    detail: >-
+      Organization still public with five repositories; last push 2023-05-26, tech-radar
+      archived. No contract artifacts.
+api_lifecycle:
+  contract_published: false
+  versioning_policy: null
+  deprecation_policy: null
+  sunset_header: null
+  sla: null
+  status_page: null
+  detail: >-
+    Omnipresent marketed a RESTful API for custom integrations alongside its packaged HR
+    and payroll integrations, but the reference and any machine-readable contract were only
+    ever made available through its own account/sales motion. Nothing was published at a
+    public URL, and there is now no host from which to retrieve one.

@@ -1,0 +1,133 @@
+generated: '2026-08-26'
+method: probed
+source: >-
+  Direct HTTPS probes of every host Omnipresent has ever been known to operate,
+  2026-08-26. No document was retrieved and no file was saved.
+hit_count: 0
+note: >-
+  Recorded absence, not a document set. Omnipresent was acquired by Deel in October 2025
+  and its web presence has been decommissioned, so there is no origin left to serve a
+  /.well-known/ surface: omnipresent.com publishes NS and MX records but no A or AAAA
+  record, www.omnipresent.com is NXDOMAIN, and omnipresent.group SERVFAILs at the
+  registry. Every request below failed at name resolution (curl exit 6) rather than
+  returning an HTTP status, which is why `status: 0` is recorded rather than 404. NO
+  WellKnown and NO SecurityTxt pointer is emitted from this file — nothing was served.
+  This is also the negative result behind the a2a/ directory being absent: both
+  /.well-known/agent-card.json and the legacy /.well-known/agent.json were probed on
+  every host and neither resolved, so no agent card exists to save.
+hosts:
+- host: https://omnipresent.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 0
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 0
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 0
+    file: null
+  - path: /.well-known/api-catalog
+    status: 0
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 0
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 0
+    file: null
+  - path: /.well-known/agent.json
+    status: 0
+    file: null
+- host: https://www.omnipresent.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 0
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 0
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 0
+    file: null
+  - path: /.well-known/api-catalog
+    status: 0
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 0
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 0
+    file: null
+  - path: /.well-known/agent.json
+    status: 0
+    file: null
+- host: https://omnipresent.group
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 0
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 0
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 0
+    file: null
+  - path: /.well-known/api-catalog
+    status: 0
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 0
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 0
+    file: null
+  - path: /.well-known/agent.json
+    status: 0
+    file: null
+contract_discovery:
+  note: >-
+    STEP 0b was run in full against the same three hosts before concluding no contract
+    exists. Every path below failed at DNS resolution, identically to the /.well-known/
+    probes above.
+  paths_probed:
+  - /openapi.json
+  - /openapi.yaml
+  - /swagger.json
+  - /api-docs
+  - /llms.txt
+  - /graphql
+  - /mcp
+  status: 0
+  github_org: https://github.com/OmnipresentGroup
+  github_org_status: 200
+  github_org_finding: >-
+    The company's GitHub organization is live and is genuinely Omnipresent's (org name
+    "Omnipresent", blog https://www.omnipresent.com, description "Employment Ops &
+    Expertise for Global Teams"). It holds five public repositories: four are forks of
+    third-party projects (serverless, react-jsonschema-form, dynamodb-localhost,
+    airflow-dbt-python) and the fifth, tech-radar, is an archived internal technology
+    radar CSV. None contains an OpenAPI, AsyncAPI, GraphQL SDL, proto, WSDL or any other
+    machine-readable API contract. Last push to any repository was 2023-05-26.
+  registries_probed:
+  - registry: npm
+    query: omnipresent
+    result: >-
+      A package named "omnipresent" exists but is unrelated third-party code
+      (github.com/msteckyefantis/omnipresent, "Access your common logic everywhere").
+      No first-party Omnipresent client library on npm.
+  - registry: npm
+    query: '@omnipresent/sdk, omnipresent-sdk'
+    result: 404 — absent.
+  - registry: pypi
+    query: omnipresent, omnipresent-sdk
+    result: 404 — absent.
