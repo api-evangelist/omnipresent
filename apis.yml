@@ -17,6 +17,17 @@ description: >-
   the registry. The company's GitHub organization is still public but holds four forks and
   one archived internal tech-radar CSV, with no API contract of any kind. This profile is
   retained as a historical record; there is no API surface left to enrich.
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 image: https://avatars.githubusercontent.com/u/61059189?v=4
 url: https://raw.githubusercontent.com/api-evangelist/omnipresent/refs/heads/main/apis.yml
 x-type: company
