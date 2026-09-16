@@ -1,22 +1,19 @@
 aid: omnipresent
 name: Omnipresent
-description: >-
-  Omnipresent was a London-headquartered global employment company, founded in 2019 by
-  Matthew Wilson and Guenther Eisinger, that acted as an Employer of Record so companies
-  could hire, onboard, pay and manage employees and contractors in countries where they
-  had no legal entity. Its platform handled local employment contracts, payroll, benefits,
-  expenses and tax and labour compliance across more than 160 countries, and it sold
-  packaged integrations with HR and payroll systems alongside an account-scoped REST API
-  for custom integration work. The company raised roughly $138M, including a $120M Series B
-  in March 2022 led by Kinnevik and Tencent, and was acquired by its competitor Deel in
-  October 2025, after which clients, employees and contractors were migrated onto the Deel
-  platform. Omnipresent never published a public developer portal, API reference or
-  machine-readable specification, and its web presence has since been decommissioned:
-  omnipresent.com now publishes only NS and Google Workspace MX records with no A record,
-  www.omnipresent.com is NXDOMAIN, and the original omnipresent.group domain SERVFAILs at
-  the registry. The company's GitHub organization is still public but holds four forks and
-  one archived internal tech-radar CSV, with no API contract of any kind. This profile is
-  retained as a historical record; there is no API surface left to enrich.
+description: 'Omnipresent was a London-headquartered global employment company, founded in 2019 by Matthew
+  Wilson and Guenther Eisinger, that acted as an Employer of Record so companies could hire, onboard,
+  pay and manage employees and contractors in countries where they had no legal entity. Its platform handled
+  local employment contracts, payroll, benefits, expenses and tax and labour compliance across more than
+  160 countries, and it sold packaged integrations with HR and payroll systems alongside an account-scoped
+  REST API for custom integration work. The company raised roughly $138M, including a $120M Series B in
+  March 2022 led by Kinnevik and Tencent, and was acquired by its competitor Deel in October 2025, after
+  which clients, employees and contractors were migrated onto the Deel platform. Omnipresent never published
+  a public developer portal, API reference or machine-readable specification, and its web presence has
+  since been decommissioned: omnipresent.com now publishes only NS and Google Workspace MX records with
+  no A record, www.omnipresent.com is NXDOMAIN, and the original omnipresent.group domain SERVFAILs at
+  the registry. The company''s GitHub organization is still public but holds four forks and one archived
+  internal tech-radar CSV, with no API contract of any kind. This profile is retained as a historical
+  record; there is no API surface left to enrich.'
 deliveryModel:
   model: unknown
   open_source: false
@@ -46,27 +43,23 @@ x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
 x-tier-reason: defunct-no-api-surface
-x-status: acquired
+x-status: defunct
 x-founded: '2019'
 x-headquarters: London, United Kingdom
 x-acquired-by: Deel
 x-acquired-date: '2025-10-22'
-x-acquisition-note: >-
-  Acquired by Deel; announced 22 October 2025 by Omnipresent's advising counsel. Clients,
-  employees and contractors were migrated to the Deel platform and the standalone
-  Omnipresent product was retired. Deel is profiled separately at all/deel — no Deel
-  artifact is attributed to this company.
+x-acquisition-note: Acquired by Deel; announced 22 October 2025 by Omnipresent's advising counsel. Clients,
+  employees and contractors were migrated to the Deel platform and the standalone Omnipresent product
+  was retired. Deel is profiled separately at all/deel — no Deel artifact is attributed to this company.
 x-domain-status: decommissioned
-x-domain-note: >-
-  omnipresent.com retains NS delegation to Route 53 and live Google Workspace MX records
-  but publishes no A or AAAA record, so no HTTP request to it can complete (curl exit 6 on
-  all 15 discovery paths probed 2026-08-26); www.omnipresent.com is NXDOMAIN and the
-  earlier omnipresent.group domain returns SERVFAIL. Neither host is wired as a Website
-  pointer, and the Hiive secondary-market listing is recorded as SecondaryMarket rather
-  than as the company's web presence.
+x-domain-note: omnipresent.com retains NS delegation to Route 53 and live Google Workspace MX records
+  but publishes no A or AAAA record, so no HTTP request to it can complete (curl exit 6 on all 15 discovery
+  paths probed 2026-08-26); www.omnipresent.com is NXDOMAIN and the earlier omnipresent.group domain returns
+  SERVFAIL. Neither host is wired as a Website pointer, and the Hiive secondary-market listing is recorded
+  as SecondaryMarket rather than as the company's web presence.
 specificationVersion: '0.23'
 created: '2026-08-26'
-modified: '2026-08-26'
+modified: '2026-09-15'
 tags:
 - Company
 - Human Resources
@@ -97,12 +90,11 @@ common:
 x-coverage:
   state: none
   reason: defunct
-  detail: >-
-    Omnipresent was acquired by Deel in October 2025 and its entire web presence has been
-    switched off — omnipresent.com keeps its Route 53 delegation and Google Workspace mail
-    records but publishes no A record, so all 45 discovery probes across omnipresent.com,
-    www.omnipresent.com and omnipresent.group (well-known, agent-card, openapi, swagger,
-    graphql, mcp, llms.txt) failed at DNS resolution rather than returning any HTTP status.
+  detail: Omnipresent was acquired by Deel in October 2025 and its entire web presence has been switched
+    off — omnipresent.com keeps its Route 53 delegation and Google Workspace mail records but publishes
+    no A record, so all 45 discovery probes across omnipresent.com, www.omnipresent.com and omnipresent.group
+    (well-known, agent-card, openapi, swagger, graphql, mcp, llms.txt) failed at DNS resolution rather
+    than returning any HTTP status.
   evidence:
   - url: https://omnipresent.com/
     status: 0
